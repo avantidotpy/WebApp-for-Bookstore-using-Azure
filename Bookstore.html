@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BOOKLAND</title>
+	<header>
+		<div class="w3-container w3-lobster">
+  <p class="w3-xlarge" style="position: absolute; top:0px ;left:0px;"> <img align="middle" src="img/books1.png" width="122" height="50">B O O K L A N D</p>
+  <a href="registration\" style="position: absolute; top: 30px;right: 10px;"><i class="fa fa-user-circle fa-2x icon" aria-hidden="true"></i></a>
+  <a href="registration\index.php" style="position: absolute;top: 30px;right:80px;"> <i class="fa fa-shopping-cart fa-2x icon" aria-hidden="true"></i></a>
+  </div></header>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=KoHo" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=KoHo" rel="stylesheet">
+<style>
+
+.icon:hover{
+opacity: 0.5;
+transform: scale(1.05);
+
+}
+
+.koho{
+	font-family: 'KoHo', sans-serif;
+}
+
+.books:hover {
+opacity: 0.5;
+transform: scale(1.25);
+}
+
+.w3-lobster {
+    font-family: "Lobster", serif;
+}
+
+#header1 {
+  /*background-color:#b78933;*/ 
+color:#3c3c3c;
+background: #77A1D3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #FCCBDA, #87E9F3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #FCCBDA, #87E9F3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+ 
+ }
+
+body {
+    font-size: 18px;
+}
+
+#menu{
+  margin: 0;
+  padding: 0;
+  /*margin-top: 350px;*/
+}
+#menu li,.dropbtn{
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  padding: 14px 16px;
+    text-decoration: none;
+    overflow: hidden;
+     color:#3c3c3c;
+}
+
+
+/*li.dropdown {
+    display: inline-block;
+}*/
+
+#menu li a{
+  text-decoration: none;
+  position: relative;
+  font-size: 20px;
+  font-weight: 700;
+  display: block;
+  overflow: hidden;
+  transition: 0.7s all;
+  padding: 14px 30px;
+ 
+}
+#menu li a:before{
+  content: '';
+  width: 60px;
+  position: absolute;
+  border-bottom: 3px solid #3c3c3c;
+  bottom: 0;
+  right: 350px;
+  transition: 0.7s all;
+}
+#menu li a:hover:before{
+  right: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    color: black;
+    font-family: inherit;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1,
+	overflow:hidden;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.mySlides {display:none;}
+
+.contact{
+  
+}
+
+</style>
+</head>
+<body id="header1">
+
+<div class="koho">
+  <ul id="menu">
+  <ul>
+    <center>
+<li><a href="Bookstore.html">Home</a></li>
+<li><a href="registration/contact.php">Contact</a></li>
+<li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Categories<i class="fa fa-caret-down"></i></a>
+    <div class="dropdown-content">
+      <a href="registration\FE.php">Sem 1 & Sem 2</a>
+      <a href="registration\SE.php">Sem 3 & Sem 4</a>
+      <a href="registration\TE.php">Sem 5 & Sem 6</a>
+      <a href="registration\BE.php">Sem 7 & Sem 8</a>
+      
+    </div>
+  </li>
+
+</center>
+</ul>
+</ul>
+
+</div>
+
+<div class="w3-content w3-section" style="max-width:1328px">
+  <img class="mySlides w3-animate-left" src="img/books01.jpg" style="width:100%">
+  <img class="mySlides w3-animate-left" src="img/books04.jpg" style="width:100%">
+  <img class="mySlides w3-animate-left" src="img/books02.jpg" style="width:100%">
+  <img class="mySlides w3-animate-left" src="img/books03.jpg" style="width:100%">
+</div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 5000);    
+}
+</script>
+
+</div>
+
+</body>
+</html>
+
+
